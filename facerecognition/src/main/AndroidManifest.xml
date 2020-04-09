@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mehran"
+    android:installLocation="auto"
+    android:versionCode="24"
+    android:versionName="2.4">
+
+    <uses-sdk android:minSdkVersion="9" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:required="true" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="false"
+        android:smallScreens="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" android:required="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"  android:required="true"/>
+
+    <application
+        android:icon="@drawable/lightbulb"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.mehran.MainActivity"
+            android:label="Face Recognition">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mehran.Recognize"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.mehran.Training"
+            android:label="Training"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.mehran.NameActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name="com.mehran.ReviewResults"
+            android:label="Review and Mark"/>
+
+        <!--android:screenOrientation="portrait"-->
+    </application>
+
+</manifest>
