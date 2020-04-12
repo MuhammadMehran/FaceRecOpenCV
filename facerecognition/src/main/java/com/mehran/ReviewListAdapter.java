@@ -11,9 +11,6 @@ import android.widget.CompoundButton;
 
 import java.util.List;
 
-/**
- * Created by kunal on 25/4/17.
- */
 
 public class ReviewListAdapter extends RecyclerView.Adapter<ReviewListAdapter.ReviewListViewHolder> {
 
